@@ -78,11 +78,15 @@
       // Splash screen fade out
       window.onload = () => {
         const splashScreen = document.getElementById("splash-screen");
-        splashScreen.classList.add("fade-out");
 
-        splashScreen.addEventListener("transitionend", () => {
-          splashScreen.style.display = "none";
-        });
+        // Delay 2 detik sebelum mulai fade-out
+        setTimeout(() => {
+          splashScreen.classList.add("fade-out");
+
+          splashScreen.addEventListener("transitionend", () => {
+            splashScreen.style.display = "none";
+          });
+        }, 2000); // 2000 ms = 2 detik
       };
     </script>
   </body>
