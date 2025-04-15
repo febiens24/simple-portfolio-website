@@ -6,39 +6,52 @@
     <title>PT. Angkasa Pura</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Metadata umum -->
-    <meta name="title" content="Maintenance - My Website" />
+    <meta name="title" content="PT. Angkasa Pura" />
     <meta
       name="description"
-      content="Website under maintenance. Please try again later."
+      content="Perusahaan pengelola bandara terbesar di dunia."
     />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/" />
-    <meta property="og:title" content="My Website is Under Maintenance" />
+    <meta property="og:url" content="https://www.injourneyairports.id/" />
+    <meta property="og:title" content="PT. Angkasa Pura" />
     <meta
       property="og:description"
-      content="Please try again later. We're doing some quick updates ✈️"
+      content="Perusahaan pengelola bandara terbesar di dunia."
     />
     <meta
       property="og:image"
-      content="https://example.com/images/maintenance-preview.jpg"
+      content="https://www.injourneyairports.id/assets/bg-route-home-new-DwFgNol0.png"
     />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://example.com/" />
-    <meta property="twitter:title" content="My Website is Under Maintenance" />
+    <meta property="twitter:url" content="https://www.injourneyairports.id/" />
+    <meta property="twitter:title" content="PT. Angkasa Pura" />
     <meta
       property="twitter:description"
-      content="Please try again later. We're doing some quick updates ✈️"
+      content="Perusahaan pengelola bandara terbesar di dunia."
     />
     <meta
       property="twitter:image"
-      content="https://example.com/images/maintenance-preview.jpg"
+      content="https://www.injourneyairports.id/assets/bg-route-home-new-DwFgNol0.png"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="favicon-192x192.png"
+      type="image/png"
     />
   </head>
   <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <h2>Loading...</h2>
+    </div>
+
     <header>
       <h1>PT. Angkasa Pura</h1>
     </header>
@@ -61,6 +74,16 @@
         backDelay: 2000,
         loop: true,
       });
+
+      // Splash screen fade out
+      window.onload = () => {
+        const splashScreen = document.getElementById("splash-screen");
+        splashScreen.classList.add("fade-out");
+
+        splashScreen.addEventListener("transitionend", () => {
+          splashScreen.style.display = "none";
+        });
+      };
     </script>
   </body>
 </html>

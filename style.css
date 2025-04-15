@@ -45,3 +45,26 @@ footer p {
   font-size: 0.9rem;
   color: #aaa;
 }
+
+/* Splash Screen */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 9999; /* Ensures splash screen is on top */
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+/* Fade-out effect for splash screen after page is loaded */
+#splash-screen.fade-out {
+  opacity: 0;
+}
